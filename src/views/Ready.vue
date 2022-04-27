@@ -102,7 +102,7 @@ export default {
             phonenumber:'1381234567',
             location:'xx',
             describe:"xx",
-            time:"2022年4月27日"
+            time:"2022年4月27日 "
           },
           {
             id:1,
