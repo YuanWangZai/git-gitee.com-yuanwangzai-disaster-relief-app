@@ -1,7 +1,7 @@
 <template>
 <div style="font-size:12px; line-height:60px; display: flex;">
   <div style="font-size:20px; font-weight:500; color: #fff; margin-right: 30px;"> <i class="el-icon-s-flag"></i> 实时救助管理平台</div>
-<el-menu  default-active="2" class="el-menu-vertical-demo" text-color="#fff" background-color="#3369BB" mode="horizontal" @select="handleSelect" router>
+<el-menu  default-active="2" class="el-menu-vertical-demo" text-color="#fff" background-color="#3369BB" mode="horizontal" router>
     
     <el-menu-item index="/audit">审核求助</el-menu-item>
     <el-menu-item index="/knowledge">知识管理</el-menu-item>

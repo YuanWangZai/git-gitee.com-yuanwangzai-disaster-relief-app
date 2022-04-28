@@ -16,10 +16,9 @@
       <el-table-column prop="location" label="求助地址" width="180"></el-table-column>
       <el-table-column prop="describe" label="现场情况描述"></el-table-column>
       <el-table-column prop="time" label="时间" width="130"></el-table-column>
-      <el-table-column label="操作"  width="180" align="center">
+      <el-table-column prop="state" label="状态"  width="100" align="center" >
         <template slot-scope="scope">
-          <el-button type="success" @click="pass(scope.row)" size="mini" >通过<i class="el-icon-circle-check"></i></el-button>
-          <el-button type="danger"  @click="refuse(scope.row)" size="mini" >不通过<i class="el-icon-circle-close"></i></el-button>
+            <el-tag disable-transitions type="success">{{scope.row.state}}</el-tag>
         </template>
       </el-table-column>
     </el-table>
@@ -36,18 +35,6 @@
         </el-pagination>
       </div>
 
-      <div style="margin: 10px 50px;">
-        <el-popconfirm
-                class="mr-5"
-                confirm-button-text='确定'
-                cancel-button-text='取消'
-                icon="el-icon-info"
-                icon-color="red"
-                title="您确定要审核通过所以选中数据吗？"
-                @confirm="passBatch">
-          <el-button type="primary" slot="reference" size="mini" @click="passBatch">一键审核<i class="el-icon-circle-check"></i></el-button>
-        </el-popconfirm>
-      </div>
   </div>
 </div>
 
@@ -57,7 +44,7 @@
 <script>
 
 export default {
-    name: "ready",
+    name: "approval",
     data(){
       return{
         //表中数据
@@ -67,28 +54,32 @@ export default {
             phonenumber:'1381234567',
             location:'xx',
             describe:"xx",
-            time:"2022年4月27日 "
+            time:"2022年4月27日 ",
+            state:'已救助'
           },
           {
             id:1,
             phonenumber:'1381234567',
             location:'xx',
             describe:"xx",
-            time:"2022年4月27日"
+            time:"2022年4月27日",
+            state:'已救助'
           },
           {
             id:2,
             phonenumber:'1381234567',
             location:'xx',
             describe:"xx",
-            time:"2022年4月27日"
+            time:"2022年4月27日",
+            state:'已救助'
           },
           {
             id:3,
             phonenumber:'1381234567',
             location:'xx',
             describe:"xx",
-            time:"2022年4月27日"
+            time:"2022年4月27日",
+            state:'已救助'
           },
         ],
 
